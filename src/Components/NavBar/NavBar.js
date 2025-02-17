@@ -37,6 +37,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Tooltip from '@mui/material/Tooltip';
 import Avatar from '@mui/material/Avatar';
+import Card1 from "../Card1/Card1";
+import Charts from "../Charts/Charts";
+import PieChart from "../Charts/PieChart";
+import PiesChart from "../Charts/PieChart";
 
 const drawerWidth = 240;
 
@@ -98,7 +102,7 @@ function NavBar(props) {
             flexDirection: "column",
           }}
         >
-          Pixel{" "}
+          Pixel
           <Typography
             component="span"
             sx={{ fontSize: "12px", fontWeight: "bold" }}
@@ -275,19 +279,15 @@ function NavBar(props) {
       >
         <Toolbar />
         <Typography sx={{ marginBottom: 2 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
+          <Card1/>
+          <Box display="grid" gap="20px" paddingLeft="16px" paddingRight="16px" sx={{display: "grid",
+    gridTemplateColumns: {
+      xs: "1fr",    
+      md: " 1fr 1fr" 
+    },}}>
+          <Charts/>
+          <PiesChart/>
+          </Box>
         </Typography>
         <Typography sx={{ marginBottom: 2 }}>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
